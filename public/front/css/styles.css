@@ -1,0 +1,10 @@
+.tab-content{
+    padding: 0 !important;
+    border: none !important;
+}
+.navigation .navbar-brand{
+    height: 160px !important;
+}
+.overlay-primary::before{
+    background-color: black !important;
+}
