@@ -6,7 +6,7 @@
           <div class="col-md-4">
             <div class="mb-5 mb-md-0 text-center text-md-left">
               <!-- logo -->
-              <img class="mb-30" src="{{ asset('front/images/logo-footer.png') }}" alt="logo">
+              <img class="mb-30" src="{{ asset('front/images/membre/logo.svg') }}" alt="logo">
               <p class="text-white mb-30">Nous sommes une église évangélique  qui investit dans la quête des âmes pour le Christ.
                 Nous avons une doctrine fondée uniquement sur Jésus-Christ et rien d'autre.
               </p>
@@ -77,15 +77,17 @@
             <div class="mt-5 mt-lg-0 text-center text-md-left">
               <h4 class="mb-4 text-white">Abonnez-vous</h4>
               <p class="text-white mb-4">Abonnez-vous à notre newsletter pour être informé en temps réel de nos actualités et activités</p>
-              <form action="#" class="position-relative">
-                <input type="text" class="form-control subscribe" name="subscribe" id="Subscribe"
-                  placeholder="Enter Your Email">
-                <button class="btn-subscribe" type="submit" value="send">
-                  <i class="ti-arrow-right"></i>
-                </button>
-              </form>
+                <form method="POST" class="position-relative form-newsletter">
+                  @csrf
+                  <input type="email" class="form-control subscribe" name="subscribe" id="Subscribe"
+                    placeholder="Entrez votre adresse email" required>
+                    <p class="mt-1 text-danger success_message" style="display: none;">Merci pour votre abonnement !</p>
+                    <button class="btn-subscribe btn-abonne">
+                      <i class="ti-arrow-right"></i>
+                    </button>
+                </form>
             </div>
-          </div>
+          </div>&
         </div>
       </div>
     </div>
@@ -116,5 +118,47 @@
         <i class="ti-angle-up"></i>
       </button>
     </div>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            $('.form-newsletter').submit(function(e) {
+                e.preventDefault();
+                let message = $('.form-newsletter input[type="email"]').val();
+                if (!message == "") {
+
+                        $.ajax({
+                            method: "POST",
+                            url: '/save',
+                            data: {
+                                "_token": "{{ csrf_token() }}",
+                                'message': message,
+
+                            },
+                            beforeSend: function() {
+                                $('.btn-abonne').prop('disable', false);
+                            },
+                            success: function(data) {
+
+                                $('.success_message').css('display', 'block');
+                                setTimeout(() => {
+                                    $('.success_message').css('display', 'none');
+                                }, 3000);
+                            },
+                            completed: function() {
+                                $('.btn-abonne').prop('disable', true);
+                            }
+                        })
+
+                } else {
+                    alert('Le champ est requis');
+                }
+            });
+        });
+
+    </script>
   </footer>
   <!-- /footer -->

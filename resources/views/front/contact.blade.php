@@ -27,15 +27,14 @@
                     <li class="d-flex mb-30">
                         <i class="round-icon mr-3 ti-mobile"></i>
                         <div class="align-self-center font-primary">
-                            <p>+229 95371154</p>
-                            <p>+229 91598299</p>
+                            <p>+229 62529471</p>
+                            <p>+229 96927055</p>
                         </div>
                     </li>
                     <li class="d-flex mb-30">
                         <i class="round-icon mr-3 ti-email"></i>
                         <div class="align-self-center font-primary">
-                            <p>esaietchagnoni@gmail.com.com</p>
-                            <p>esaietchagnoni@email.com</p>
+                            <p>portetvbenin@gmail.com</p>
                         </div>
                     </li>
                     <li class="d-flex mb-30">
@@ -50,24 +49,36 @@
             <!-- form -->
             <div class="col-lg-8 col-md-7">
                 <div class="p-5 rounded box-shadow">
-                    <form action="#" class="row">
+                    <form action="{{ route('contact-store') }}" method="POST" class="row">
+                        @csrf
+                        @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show container mb-5  d-flex align-items-center"  role="alert">
+                            <h6> {{ session('success') }} </h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
+
                         <div class="col-12 pb-2">
                             <h4>Envoyez-nous un message</h4>
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
+                            <input type="text" name="nom" id="name" class="form-control nom" placeholder="Nom" required>
                         </div>
                         <div class="col-lg-6">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Adresse email" required>
+                            <input type="email" class="form-control email" name="email" id="email" placeholder="Adresse email" required>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="phone" class="form-control phone" name="phone" id="phone" placeholder="Numero de téléphone" required>
                         </div>
                         <div class="col-12">
-                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Sujet" required>
+                            <input type="text" name="objet" id="subject" class="form-control objet" placeholder="Sujet" required>
                         </div>
                         <div class="col-12">
-                            <textarea class="form-control p-2" name="message" id="message" placeholder="Tapez votre message..." required style="height: 150px;"></textarea>
+                            <textarea class="form-control p-2 messsage" name="message" id="message" placeholder="Tapez votre message..." required style="height: 150px;"></textarea>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary" type="submit" value="send">ENVOYER</button>
+                            <button class="btn btn-primary btn-submit" value="send">ENVOYER</button>
                         </div>
                     </form>
                 </div>
@@ -82,5 +93,44 @@
     </div>
 </section>
 
+<script>
+    $(document).ready(function() {
 
+        // $('.form-contact').submit(function(e) {
+        //     e.preventDefault();
+
+        //     let nom = $('.form-contact input[name="nom"]').val();
+        //     let phone = $('.form-contact input[name="phone"]').val();
+        //     let objet = $('.form-contact input[name="nobjetom"]').val();
+        //     let message = $('.form-contact input[name="nomessagem"]').val();
+        //     let email = $('.form-contact input[name="email"]').val();
+
+        //     $.ajax({
+        //         method: "POST",
+        //         url: '/contact',
+        //         data: {
+        //             "_token": "{{ csrf_token() }}",
+        //             'nom': nom,
+        //             'email': email,
+        //             'message': message,
+        //             'objet': objet,
+        //             'phone': phone
+        //         },
+        //         beforeSend: function() {
+        //             $('.btn-submit').prop('disable', false);
+        //         },
+        //         success: function(data) {
+        //             $('.on-success-text').css('display', 'block');
+        //             setTimeout(() => {
+        //                 $('.on-success-text').css('display', 'none');
+        //             }, 3000);
+        //         },
+        //         completed: function() {
+        //             $('.btn-submit').prop('disable', true);
+        //         }
+        //     })
+
+        // })
+    })
+</script>
 @endsection

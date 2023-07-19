@@ -50,13 +50,15 @@ border-color: #badbcc;
                                         <th>Contenu</th>
                                         <th>Action</th>
                                     </tr>
-                                </thead>
+                                </thead>*889 1 1
+                                59238
                                 <tbody>
 
                                     @forelse ($activites as $activite)
                                     <tr>
 
                                         <td><img class="rounded-circle" width="35" src="{{ asset('storage/'.$activite->photo) }}" alt=""></td>
+                                       
                                         <td>{{ $activite->titre }}</td>
                                         <td>{{ \Carbon\Carbon::parse($activite->start_date)->format('d-m-Y') }}</td>
                                         <td>{{ \Carbon\Carbon::parse($activite->end_date)->format('d-m-Y') }}</td>

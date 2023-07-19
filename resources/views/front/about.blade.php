@@ -88,10 +88,10 @@
         <div class="row">
             <div class="col-12">
 
-                <h2 class="section-title section-title-border-half">Prenez un rendez-vous avec nous</h2>
+                <h3 class="section-title">Demandez <a href="{{ route('apointments.index') }}" class="text-decoration-underline">un rendez-vous</a> pour bénéficier de nos services</h3>
             </div>
 
-            <div class="col-lg-12">
+            {{-- <div class="col-lg-12">
                 <div id="accordion" class="mb-md-50">
                     <div class="card border-0 mb-4">
                         <div class="card-header bg-gray border p-0">
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>
@@ -192,7 +192,7 @@
                 <h2 class="section-title section-title-border"> Des fidèles témoignent </h2>
             </div>
             <div class="col-lg-5 col-md-5 pr-0 align-self-center">
-                <img class="img-fluid w-100" src="{{ asset('front/images/client.png') }}" alt="clients-image">
+                {{-- <img class="img-fluid w-100" src="{{ asset('front/images/client.png') }}" alt="clients-image"> --}}
             </div>
             <div class="col-lg-7 col-md-7 align-self-center pl-0">
                 <div class="testimonial-slider p-5">

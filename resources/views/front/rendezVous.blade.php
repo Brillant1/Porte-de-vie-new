@@ -40,7 +40,7 @@
             </ul>
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <form action="" class="pt-3 rendez-vous-prophetique">
+                    <form action="#" class="pt-3 rendez-vous-prophetique">
                         <div class="row mt-3">
                             <div class="col-12 col-sm-12 col-md-6 mb-3">
                                 <label for="nom">Nom et Prénom(s)<span class="text-danger fw-bold">*</span></label>
@@ -58,7 +58,6 @@
                                 <label for="phone">Téléphone<span class="text-danger fw-bold">*</span></label>
                                 <input type="phone" id="phone" class=" border border-1 form-control" name="phone"
                                     required>
-
                             </div>
                             <div class="col-12 col-lg-6 col-sm-12 col-md-6 mb-3">
                                 <label for="objet">Objet de votre message<span class="text-danger fw-bold">*</span></label>
@@ -87,7 +86,14 @@
                     </form>
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <form action="" class="pt-3 rendez-vous-simple">
+                    @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show container mb-5  d-flex align-items-center"  role="alert">
+                            <h6> {{ session('success') }} </h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+                    <form action="{{ route('apointments.store') }}" class="pt-3 rendez-vous-simple" method="POST">
+                        @csrf
                         <div class="row mt-3">
                             <div class="col-12 col-sm-12 col-md-6 mb-3">
                                 <label for="nom">Nom et Prénom(s)<span class="text-danger fw-bold">*</span></label>
@@ -103,7 +109,7 @@
 
                             <div class="col-12 col-lg-6 col-sm-12 col-md-6 mb-3">
                                 <label for="phone">Téléphone<span class="text-danger fw-bold">*</span></label>
-                                <input type="phone" id="phone" class=" border border-1 form-control" name="phone"
+                                <input type="phone" id="phone" class=" border border-1 form-control" name="telephone"
                                     required>
 
                             </div>
@@ -127,7 +133,7 @@
                                 <textarea name="message" id="message" cols="30" rows="10" class="border border-1 form-control"></textarea>
                             </div>
 
-                            <div class=" d-flex justify-content-center mt-3 ml-3 ">
+                            <div class=" d-flex justify-content-center mt-3 ml-3 w-100">
                                 <input type="submit" class=" text-white bg-dark rounded p-2 px-4" value="Enrégistrer">
                             </div>
                         </div>

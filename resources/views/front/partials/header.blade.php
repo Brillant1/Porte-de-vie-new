@@ -8,11 +8,11 @@
                 <div class="col-12">
                     <ul class="list-inline text-lg-right text-center">
                         <li class="list-inline-item">
-                            <a href="mailto:info@companyname.com">info@companyname.com</a>
+                            <a href="mailto:info@companyname.com">portetvbenin@gmail.com</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="callto:1234565523">Call Us Now:
-                                <span class="ml-2"> 123 456 5523</span>
+                            <a href="callto:1234565523">Nous contacter:
+                                <span class="ml-2"> (00229) 62529471 / 96927055</span>
                             </a>
                         </li>
                         <li class="list-inline-item">
@@ -60,7 +60,7 @@
                             </a>
                             <div class="dropdown-menu" >
                                 <a class="dropdown-item" href="{{ route('activite') }}">Nos activités</a>
-                                <a class="dropdown-item" href="{{ route('rendez-vous') }}">Rendez-vous</a>
+                                <a class="dropdown-item" href="{{ route('apointments.index') }}">Rendez-vous</a>
                             </div>
                         </li>
 

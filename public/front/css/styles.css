@@ -8,3 +8,22 @@
 .overlay-primary::before{
     background-color: black !important;
 }
+
+
+.atout-item .card {
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.atout-item .card-title {
+    font-weight: bold;
+}
+
+.atout-item .card img {
+    height: 250px;
+    position: relative;
+    object-fit: cover;
+    /* border: 2px solid blue; */
+    border-radius: 0px 12px 0px 0px;
+}

@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\Admin\AnnexeController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ActiviteController;
 use App\Http\Controllers\Admin\PartenaireController;
 use App\Http\Controllers\Admin\TemoignageController;
+use App\Http\Controllers\ApointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +21,9 @@ use App\Http\Controllers\Admin\TemoignageController;
 |
 */
 
-Route::get('/', function () {
-    return view('front.accueil');
-});
-
-Route::get('accueil', function(){
-    return view('front.accueil');
-})->name('accueil');
+Route::get('accueil', [HomeController::class, 'index'])->name('accueil');
+Route::get('/', [HomeController::class, 'index']);
+Route::get('annexes/all', [HomeController::class, 'annexe_index'])->name('annexe');
 
 Route::get('about', function(){
     return view('front.about');
@@ -42,13 +41,6 @@ Route::get('activite', function(){
     return view('front.activite');
 })->name('activite');
 
-Route::get('rendez-vous', function(){
-    return view('front.rendezVous');
-})->name('rendez-vous');
-
-Route::get('annexe', function(){
-    return view('front.annexes');
-})->name('annexe');
 Route::get('mediatheque', function(){
     return view('front.mediatheque');
 })->name('mediatheque');
@@ -64,3 +56,11 @@ Route::resource('partenaires', PartenaireController::class);
 Route::resource('temoignages', TemoignageController::class);
 Route::resource('activites', ActiviteController::class);
 Route::resource('annexes', AnnexeController::class);
+Route::resource('apointments', ApointmentController::class);
+
+
+Route::get('contact', [ContactMailController::class, 'create'])->name('contact');
+Route::post('contact', [ContactMailController::class, 'store'])->name('contact-store');
+
+
+Route::post('/save', [HomeController::class, 'save'])->name('save');
