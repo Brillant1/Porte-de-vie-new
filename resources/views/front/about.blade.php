@@ -88,10 +88,10 @@
         <div class="row">
             <div class="col-12">
 
-                <h3 class="section-title">Demandez <a href="{{ route('apointments.index') }}" class="text-decoration-underline">un rendez-vous</a> pour bénéficier de nos services</h3>
+                <h3 class="section-title">Demandez un rendez-vous</h3>
             </div>
 
-            {{-- <div class="col-lg-12">
+            <div class="col-lg-12">
                 <div id="accordion" class="mb-md-50">
                     <div class="card border-0 mb-4">
                         <div class="card-header bg-gray border p-0">
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
 
         </div>
     </div>

@@ -19,34 +19,34 @@
     </div>
 </section>
 
-@foreach ($annexes as $annexe)
+{{-- @foreach ($annexes as $annexe) --}}
 
-    @php
-
+    {{-- @php
         $color = ["rgba(254,228,179,0.1)","rgba(113, 168, 50,0.06)", "rgba(255, 255, 255,0.06)"  ]
-    @endphp
-    <section class="section d-flex justify-content-center">
-        <div class="" style="width:75%; background-color: {{ array_rand($color) }};">
-            <div class="row">
+    @endphp --}}
+    <section class="section d-flex justify-content-center" style="background-color: rgba(254,228,179,0.1);" >
+        <div class="" style="width:75%;">
+            <div class=" d-flex justify-content-between">
                 <div class="col-12 text-center">
                     {{-- <h5 class="section-title-sm">Best Service</h5> --}}
                 </div>
                 <div class="col-lg-7">
                     <div class="mb-40">
-                    <h2 class="section-title section-title-border text-center">{{ $annexe->nom }}</h2>
-
+                    <h2 class="section-title section-title-border text-center">Godomey Cocotomey</h2>
                         <div class="text-dark">
-                            {!! $annexe->description !!}
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit ut fermentum tristique, magna nisi accumsan dictum conubia nibh sollicitudin gravida dignissim nunc mi, sed libero tempus quis id inceptos fringilla curae phasellus.
+                            Nisl ut sapien leo libero quisque cursus tincidunt cras habitant imperdiet taciti lacus,
+                            sollicitudin pulvinar tortor nam quis sagittis mollis pellentesque nibh accumsan auctor. At tempus venenatis maecenas per curae rutrum tincidunt, ad interdum malesuada congue nec curabitur conubia augue
                         </div>
                     </div>
                 </div>
                 <!-- progressbar -->
                 <div class="col-lg-4">
-                    <img class="" src="{{ asset('storage/'.$annexe->photo)  }}" alt="">
+                    <img class="" src="{{ asset('front/images/service/service-single.jpg')  }}" alt="">
                 </div>
             </div>
         </div>
     </section>
-@endforeach
+{{-- @endforeach --}}
 
 @endsection

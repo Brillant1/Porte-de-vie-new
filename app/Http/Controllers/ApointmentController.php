@@ -28,7 +28,7 @@ class ApointmentController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->telephone);
+        try{
         $data= [
             "nom" => $request->nom,
             "email" => $request->email,
@@ -38,9 +38,16 @@ class ApointmentController extends Controller
             "heure" => $request->heure,
             "message" => $request->message,
         ];
-        Apointment::create($data);
-        return back()->with('success', 'Rendez-vous enrégistré avec succès');
 
+        return response()->json([
+            'success' => true
+        ], 200);
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Une erreur est survenue lors de la soumission du formulaire.'
+        ], 500);
+    }
     }
 
     /**

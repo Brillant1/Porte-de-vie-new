@@ -57,6 +57,7 @@ Route::resource('temoignages', TemoignageController::class);
 Route::resource('activites', ActiviteController::class);
 Route::resource('annexes', AnnexeController::class);
 Route::resource('apointments', ApointmentController::class);
+Route::post('/storeApointment', [ApointmentController::class, 'store'])->name('storeApointment');
 
 
 Route::get('contact', [ContactMailController::class, 'create'])->name('contact');
