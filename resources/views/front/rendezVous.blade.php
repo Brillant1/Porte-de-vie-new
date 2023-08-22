@@ -1,7 +1,7 @@
 @extends('front.partials.template')
 @section('content')
     <!-- team -->
-    <section class="page-title overlay" style="background-image: url({{ asset('front/images/background/page-title.jpg') }});">
+    <section class="page-title overlay" style="background-image: url({{ asset('public/front/images/background/page-title.jpg') }});">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -42,13 +42,18 @@
             </ul>
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit purus justo, leo aliquam bibendum lectus
-                        pretium ac massa luctus, phasellus iaculis rutrum fringilla cum mauris tortor himenaeos. Vehicula
-                        ultricies curabitur cum proin habitant integer
-                        vulputate vestibulum mattis in erat, class hendrerit faucibus sapien urna cursus dictumst morbi
-                        nascetur enim, pulvinar velit magnis orci massa viverra nunc varius venenatis sem
+                        Vous aimeriez voir le Prophète. Intéressez par les merveilles de Dieu ? Alors cliquez sur le lien «
+                        Je prends » pour remplir le formulaire rendez-vous prophétique. Veillez noter que ce rendez-vous est
+                        subordonné par une suscription élémentaire qui s’élève à <strong>10.000 FCFA</strong>
                     </p>
+                    <div class="success_message_prophetique alert alert-success text-center" style="display: none;">
+                        <span>Votre rendez-vous a bien été soumis avec succès !</span>
+                    </div>
+                     <div class="error_message_prophetique alert alert-danger text-center" style="display: none;">
+                        <span>La transaction a échouée, veillez ressayer plus tard. Merci !</span>
+                    </div>
                     <form action="#" class="pt-3 rendez-vous-prophetique" method=" POST">
                         @csrf
                         <div class="row mt-3">
@@ -66,7 +71,7 @@
 
                             <div class="col-12 col-lg-6 col-sm-12 col-md-6 mb-3">
                                 <label for="phone">Téléphone<span class="text-danger fw-bold">*</span></label>
-                                <input type="phone" id="phone" class=" border border-1 form-control" name="phone"
+                                <input type="phone" id="telephone" class=" border border-1 form-control" name="phone"
                                     required>
                             </div>
                             <div class="col-12 col-lg-6 col-sm-12 col-md-6 mb-3">
@@ -90,38 +95,39 @@
                                         class="text-danger fw-bold">(Optionnel)</span></label>
                                 <textarea name="message" id="message" cols="30" rows="10" class="border border-1 form-control"></textarea>
                             </div>
+                            <input type="hidden" value="prophetique" id="type">
+
 
                             <div class=" d-flex justify-content-center mt-3 ml-3 w-100">
-                                <input type="submit" class=" text-white bg-dark rounded p-2 px-4" value="Enrégistrer">
+                                <button type="reset"
+                                    class=" mr-2 border-0 text-white bg-danger rounded p-2 px-4 btn-rendez-vous-simple">Annuler</button>
+                                <input type="submit" class=" text-white bg-dark rounded p-2 px-4 border-0"
+                                    value="Enrégistrer">
                             </div>
                         </div>
                     </form>
+
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit purus justo, leo aliquam bibendum lectus
-                        pretium ac massa luctus, phasellus iaculis rutrum fringilla cum mauris tortor himenaeos. Vehicula
-                        ultricies curabitur cum proin habitant integer
-                        vulputate vestibulum mattis in erat, class hendrerit faucibus sapien urna cursus dictumst morbi
-                        nascetur enim, pulvinar velit magnis orci massa viverra nunc varius venenatis sem
+                        Vous aimeriez voir le Prophète. Intéressez par les merveilles de Dieu ? Alors cliquez sur le lien «
+                        Je prends » pour remplir le formulaire rendez-vous ordinaire.
                     </p>
-                    {{-- @if (session('success'))
-                    <div class="success_message" style="display: none;">
-                        <div class="alert alert-success alert-dismissible fade show container mb-5  d-flex align-items-center"
-                            role="alert">
-                            <h6> {{ session('success') }} </h6>
-                        </div>
+
+                    <div class="success_message_simple alert alert-success text-center" style="display: none;">
+                        <span>Votre rendez-vous a bien été soumis avec succès !</span>
                     </div>
-                    @endif --}}
+                    <div class="error_message_simple alert alert-danger text-center" style="display: none;">
+                        <span>L'enrégistrement du rendez-vous a échoué, réessayez plus tard !</span>
+                    </div>
 
-
-                    <form action="#" class="pt-3 rendez-vous-simple" method="POST">
+                    <form action="#" class="pt-1 rendez-vous-simple" method="POST">
                         @csrf
                         <div class="row mt-3">
                             <div class="col-12 col-sm-12 col-md-6 mb-3">
                                 <label for="nom">Nom et Prénom(s)<span class="text-danger fw-bold">*</span></label>
-                                <input type="text" id="nom" class=" border border-1 form-control px-3"
+                                <input type="text" id="nom" class=" border border-1 form-control px-3 "
                                     name="nom" required>
                             </div>
 
@@ -134,9 +140,8 @@
 
                             <div class="col-12 col-lg-6 col-sm-12 col-md-6 mb-3">
                                 <label for="phone">Téléphone<span class="text-danger fw-bold">*</span></label>
-                                <input type="phone" id="phone" class=" border border-1 form-control"
+                                <input type="phone" id="telephone" class=" border border-1 form-control"
                                     name="telephone" required>
-
                             </div>
                             <div class="col-12 col-lg-6 col-sm-12 col-md-6 mb-3">
                                 <label for="objet">Objet de votre message<span
@@ -154,64 +159,154 @@
                                 <input type="time" id="heure" class=" border border-1 form-control"
                                     name="heure" required>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 pt-3">
                                 <label for="message">Vous avez un message ? <span
                                         class="text-danger fw-bold">(Optionnel)</span></label>
                                 <textarea name="message" id="message" cols="30" rows="10" class="border border-1 form-control"></textarea>
                             </div>
+                            <input type="hidden" value="simple" id="type">
 
                             <div class=" d-flex justify-content-center mt-3 ml-3 w-100">
+                                <button type="reset"
+                                    class=" mr-2 border-0 text-white bg-danger rounded p-2 px-4 btn-rendez-vous-simple">Annuler</button>
                                 <button type="submit"
-                                    class=" text-white bg-dark rounded p-2 px-4 btn-rendez-vous-simple">Enrégistrer</button>
+                                    class=" text-white bg-dark rounded p-2 px-4 btn-rendez-vous-simple border-0">Enrégistrer</button>
                             </div>
                         </div>
                     </form>
-                    <div class="success_message" style="display: none;">Le formulaire a été soumis avec succès !</div>
+
                 </div>
             </div>
         </div>
     </section>
-
+    <script src="https://cdn.kkiapay.me/k.js"></script>
     <script>
         $(document).ready(function() {
             $('.rendez-vous-simple').submit(function(e) {
                 e.preventDefault();
-                let nom = $('.nom').val();
-                telephone = $('.telephone').val();
-                objet = $('.objet').val();
-                message = $('.message').val();
-                email = $('.email').val();
-                date = $('.date').val();
-                heure = $('.heure').val();
-                if (nom == "" || telephone == "" || objet == "" || message == "" || email == "" || date=="" || heure=="") {
+                let nom = $('.rendez-vous-simple #nom').val();
+                telephone = $(' .rendez-vous-simple #telephone').val();
+                objet = $(' .rendez-vous-simple #objet').val();
+                message = $(' .rendez-vous-simple #message').val();
+                email = $(' .rendez-vous-simple #email').val();
+                date = $(' .rendez-vous-simple #date').val();
+                heure = $(' .rendez-vous-simple #heure').val();
+                type = $(' .rendez-vous-simple #type').val();
+                if (nom == "" || telephone == "" || objet == "" || message == "" || email == "" || date ==
+                    "" || heure == "") {
                     alert('Veuillez remplir tous les champs')
-                }
-                else{
+                } else {
                     $.ajax({
-                    type: 'POST',
-                    url: '{!! URL::to('storeApointment') !!}',
-                    data: {
-                        'nom': nom,
-                        'objet': objet,
-                        'message': message,
-                        'email': email,
-                        'telephone': telephone,
-                        'date': date,
-                        'heure': heure,
-                        _token: "{{ csrf_token() }}"
-                    },
-                    success: function(data) {
-                        console.log(data)
-                        if(data.success){
-                            $('.success_message').css('display', 'block');
-                            setTimeout(() => {
-                                $('.success_message').css('display', 'none');
-                            }, 3000);
+                        type: 'POST',
+                        url: '{!! URL::to('storeApointment') !!}',
+                        data: {
+                            'nom': nom,
+                            'objet': objet,
+                            'message': message,
+                            'email': email,
+                            'telephone': telephone,
+                            'date': date,
+                            'heure': heure,
+                            'type': type,
+                            _token: "{{ csrf_token() }}"
                         },
-                    }
-                })
+                        success: function(data) {
+                            console.log(data)
+                            if (data.success) {
+                                $('.success_message_simple').css('display', 'block');
+                                setTimeout(() => {
+                                    $('.success_message_simple').css('display', 'none');
+                                }, 4000);
+                                $(' .rendez-vous-simple #nom').val("");
+                                $(' .rendez-vous-simple #telephone').val("");
+                                $(' .rendez-vous-simple #objet').val("");
+                                $(' .rendez-vous-simple #message').val("");
+                                $(' .rendez-vous-simple #email').val("");
+                                $(' .rendez-vous-simple #date').val("");
+                                $(' .rendez-vous-simple #heure').val("");
+                            }else{
+                                $('.error_message_simple').css(
+                                        'display', 'block');
+                                    setTimeout(() => {
+                                        $('.error_message_simple')
+                                            .css('display', 'none');
+                                    }, 5000);
+                            }
+                        }
+                    })
+                }
+            })
+
+            $('.rendez-vous-prophetique').submit(function(e) {
+                e.preventDefault();
+                let nom = $('.rendez-vous-prophetique #nom').val();
+                telephone = $(' .rendez-vous-prophetique #telephone').val();
+                objet = $(' .rendez-vous-prophetique #objet').val();
+                message = $(' .rendez-vous-prophetique #message').val();
+                email = $(' .rendez-vous-prophetique #email').val();
+                date = $(' .rendez-vous-prophetique #date').val();
+                heure = $(' .rendez-vous-prophetique #heure').val();
+                type = $(' .rendez-vous-prophetique #type').val();
+                if (nom == "" || telephone == "" || objet == "" || message == "" || email == "" || date ==
+                    "" || heure == "") {
+                    alert('Veuillez remplir tous les champs')
+                } else {
+                    openKkiapayWidget({
+                        amount: "1",
+                        position: "center",
+                        phone: "97000000",
+                        theme: "#032497F5",
+                        key: "51a238face61d82775a074c24111dba9108523ec",
+
+                    });
+
+                    addSuccessListener(response => {
+
+                        $.ajax({
+                            type: 'POST',
+                            url: '{!! URL::to('storeApointment') !!}',
+                            data: {
+                                'nom': nom,
+                                'objet': objet,
+                                'message': message,
+                                'email': email,
+                                'telephone': telephone,
+                                'date': date,
+                                'heure': heure,
+                                'type': type,
+                                'transactionId':response.transactionId,
+                                _token: "{{ csrf_token() }}"
+                            },
+                            success: function(data) {
+                                console.log(data)
+                                if (data.success) {
+                                    $('.success_message_prophetique').css(
+                                        'display', 'block');
+                                    setTimeout(() => {
+                                        $('.success_message_prophetique')
+                                            .css('display', 'none');
+                                    }, 6000);
+                                    $(' .rendez-vous-prophetique #nom').val("");
+                                    $(' .rendez-vous-prophetique #telephone').val("");
+                                    $(' .rendez-vous-prophetique #objet').val("");
+                                    $(' .rendez-vous-prophetique #message').val("");
+                                    $(' .rendez-vous-prophetique #email').val("");
+                                    $(' .rendez-vous-prophetique #date').val("");
+                                    $(' .rendez-vous-prophetique #heure').val("");
+                                }else{
+                                    $('.error_message_prophetique').css(
+                                        'display', 'block');
+                                    setTimeout(() => {
+                                        $('.error_message_prophetique')
+                                            .css('display', 'none');
+                                    }, 5000);
+                                }
+                            }
+                        })
+                    });
                 }
             })
         })
     </script>
 @endsection
+

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Kkiapay\Kkiapay;
 use App\Models\Apointment;
 use Illuminate\Http\Request;
 
@@ -28,26 +29,70 @@ class ApointmentController extends Controller
      */
     public function store(Request $request)
     {
-        try{
-        $data= [
-            "nom" => $request->nom,
-            "email" => $request->email,
-            "telephone" => $request->telephone,
-            "objet" => $request->objet,
-            "date" => $request->date,
-            "heure" => $request->heure,
-            "message" => $request->message,
-        ];
+        // try{
 
-        return response()->json([
-            'success' => true
-        ], 200);
-    } catch (\Exception $e) {
-        return response()->json([
-            'success' => false,
-            'message' => 'Une erreur est survenue lors de la soumission du formulaire.'
-        ], 500);
-    }
+        if ($request->type == "prophetique") {
+            $transactionId = $request->input('transactionId');
+            $kkiapay = new Kkiapay(
+                "51a238face61d82775a074c24111dba9108523ec",
+                "pk_95d79743ec2cd5a9957add72065c5b8f5760b5ccfb2ad2e6d6d257fb00e502c8",
+                "sk_f1be36c8d5c16ac42be047792e4fa0e11d5bcf0b39e50773646cb1a4bf4c644c",
+            );
+
+            if ($kkiapay->verifyTransaction($transactionId)->status == "SUCCESS") {
+                $data = [
+                    "nom" => $request->nom,
+                    "email" => $request->email,
+                    "telephone" => $request->telephone,
+                    "objet" => $request->objet,
+                    "date" => $request->date,
+                    "heure" => $request->heure,
+                    "message" => $request->message,
+                    "type" => $request->type,
+                    "transactionId" => $transactionId
+                ];
+
+                Apointment::create($data);
+
+                return response()->json([
+                    'success' => true,
+                    'message' => "Rendez-vous enrégistré avec succès"
+                ], 200);
+            }
+            return response()->json([
+                'success' => false,
+                'message' => "Paiement échoué"
+            ]);
+        }else{
+            $data = [
+                "nom" => $request->nom,
+                "email" => $request->email,
+                "telephone" => $request->telephone,
+                "objet" => $request->objet,
+                "date" => $request->date,
+                "heure" => $request->heure,
+                "message" => $request->message,
+                "type" => $request->type,
+            ];
+
+            Apointment::create($data);
+
+            return response()->json([
+                'success' => true,
+                'message' => "Rendez-vous enrégistré avec succès"
+            ], 200);
+        }
+
+
+
+
+
+        // } catch (\Exception $e) {
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Une erreur est survenue lors de la soumission du formulaire.'
+        //     ], 500);
+        // }
     }
 
     /**

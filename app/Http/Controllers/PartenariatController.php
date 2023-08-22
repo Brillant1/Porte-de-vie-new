@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Partenariat;
 
-class PartenaireController extends Controller
+class PartenariatController extends Controller
 {
     /**
      * Display a listing of the resource.

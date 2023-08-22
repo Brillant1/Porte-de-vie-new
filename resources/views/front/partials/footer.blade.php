@@ -6,7 +6,7 @@
           <div class="col-md-4">
             <div class="mb-5 mb-md-0 text-center text-md-left">
               <!-- logo -->
-              <img class="mb-30" src="{{ asset('front/images/membre/logo.svg') }}" alt="logo">
+              <img class="mb-30" src="{{ asset('/front/images/membre/logo.svg') }}" alt="logo">
               <p class="text-white mb-30">Nous sommes une église évangélique  qui investit dans la quête des âmes pour le Christ.
                 Nous avons une doctrine fondée uniquement sur Jésus-Christ et rien d'autre.
               </p>
@@ -56,7 +56,7 @@
             <h4 class="text-white mb-4">Liens utiles</h4>
             <ul class="footer-links">
               <li>
-                <a href="{{ route('activite') }}">Activités</a>
+                <a href="{{ route('all-activities') }}">Activités</a>
               </li>
               <li>
                 <a href="{{ route('about') }}">A propos</a>

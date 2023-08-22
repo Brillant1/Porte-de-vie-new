@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Activite;
+use App\Models\Service;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
@@ -121,5 +122,15 @@ class ActiviteController extends Controller
             return back()->with('success', 'Activité supprimée avec succès');
         }
         return back()->with('error', 'Activitée introuvable');
+    }
+
+    public function all_activites(){
+        $activites = Activite::all();
+        return view('front.activite', compact('activites'));
+    }
+
+    public function all_services(){
+        $services = Service::all();
+        return view('front.allServices', compact('services'));
     }
 }

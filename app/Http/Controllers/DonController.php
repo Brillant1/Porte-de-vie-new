@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
+use App\Models\Don;
 use Kkiapay\Kkiapay;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Models\Partenariat;
 
-class PartenaireController extends Controller
+class DonController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -22,7 +21,11 @@ class PartenaireController extends Controller
      */
     public function create()
     {
-        return view('front.partenariat');
+        return view('front.don');
+    }
+
+    public function type_don(){
+        return view('front.typeDon');
     }
 
     /**
@@ -43,17 +46,17 @@ class PartenaireController extends Controller
                     "prenom" => $request->prenom,
                     "email" => $request->email,
                     "telephone" => $request->telephone,
-
+                    "price" => $request->price,
                     "message" => $request->message,
                     "type" => $request->type,
                     "transactionId" => $transactionId
                 ];
 
-                Partenariat::create($data);
+                Don::create($data);
 
                 return response()->json([
                     'success' => true,
-                    'message' => "Partenariat enrégistré avec succès"
+                    'message' => "Don enrégistré avec succès"
                 ], 200);
             }
             return response()->json([

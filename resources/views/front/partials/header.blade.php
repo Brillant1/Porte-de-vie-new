@@ -26,11 +26,11 @@
         </div>
     </div>
     <!-- nav bar -->
-    <div class="navigation">
+    <div class="navigation header shadow-lg">
         <div class="container-fluid px-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="{{ route('accueil') }}">
-                    <img src="{{ asset('front/images/membre/logo.svg') }}" alt="logo">
+                    <img src="{{ asset('public/front/images/membre/logo.svg') }}" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +59,7 @@
                                 Activités
                             </a>
                             <div class="dropdown-menu" >
-                                <a class="dropdown-item" href="{{ route('activite') }}">Nos activités</a>
+                                <a class="dropdown-item" href="{{ route('all-activities') }}">Nos activités</a>
                                 <a class="dropdown-item" href="{{ route('apointments.index') }}">Rendez-vous</a>
                             </div>
                         </li>
@@ -69,7 +69,7 @@
                         </li>
 
                         <li class="nav-item d-flex align-items-center justify-content-center ">
-                            <a class="nav-link" href="">Faire un don</a>
+                            <a class="nav-link" href="{{ route('typeDon') }}">Don & Partenariat</a>
                         </li>
                         <li class="nav-item d-flex align-items-center justify-content-center border border-dark px-3 bg-dark text-white ">
                             <a class="nav-link text-white" href="{{ route('mediatheque') }}">Médiathèque</a>

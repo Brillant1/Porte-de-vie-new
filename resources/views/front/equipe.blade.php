@@ -21,9 +21,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2 class="mb-2">Notre équipe dirigenate</h2>
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                <h2 class="mb-2 text-center">Notre équipe dirigenate</h2>
+                <p class="mb-5 text-center h4">Nul ne peut valoir une grande institution de Dieu que par l’accomplissement de la prophétie de ses vaillants dirigeants</p>
             </div>
             <!-- team member -->
             <div class="col-lg-4 col-sm-6 mb-4">

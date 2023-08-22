@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('apointments', function (Blueprint $table) {
+        Schema::create('partenariats', function (Blueprint $table) {
             $table->id();
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('nom');
-            $table->string('objet');
+            $table->string('prenom');
+
             $table->string('telephone');
-            $table->time('heure');
-            $table->date('date');
-            $table->text('message');
+            $table->text('message')->nullable();
+            $table->bigInteger('type');
+            $table->string('transactionId')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('apointments');
+        Schema::dropIfExists('partenariats');
     }
 };

@@ -1,7 +1,15 @@
 @extends('front.partials.template')
 @section('content')
-
-<section class="page-title overlay" style="background-image: url({{ asset('front/images/background/page-title.jpg') }});">
+<style>
+    .section-title-border-half::after{
+        width: 225px !important;
+        left: 2px;
+    }
+    .section-title-border-half::before {
+        left:114px !important;
+    }
+</style>
+<section class="page-title overlay" style="background-image: url({{ asset('/front/images/background/page-title.jpg') }});">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -23,17 +31,16 @@
             <!-- philosophy video -->
             <div class="col-lg-5 align-self-center">
                 <div class="overlay overlay-rounded mb-md-50">
-                    <img class="img-fluid w-100 rounded" src="{{ asset('front/images/about/about-video-thumbnail.jpg') }}" alt="video-thumbnail">
-                    <a class="play-icon popup-youtube centralized" href="https://www.youtube.com/watch?v=mr9kK0_7x08"><i class="ti-control-play"></i></a>
+                    <img class="img-fluid w-100 rounded" src="{{ asset('/front/images/about/about-video-thumbnail.jpg') }}" alt="video-thumbnail">
+                    <a class="play-icon popup-youtube centralized" href="https://www.youtube.com/watch?v=VAwZDS-bVsU"><i class="ti-control-play"></i></a>
                 </div>
             </div>
             <div class="col-lg-7">
 
                 <h2 class="section-title section-title-border-half">Présentation de l'église</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor didunt laboris nisi ut aliquip
-                    ex commodo consequat. duis aute irure dolor in reprehenderivoluptate velit esse cillum dolore fugiat
-                    nulla pariatur.Excepteur sint ocaecat cupidatat noproident sunt culpa qui officia deserunt mollit anim
-                    id est laborum.</p>
+                <p>L’Église Évangélique PORTE DE VIE est un ministère prophétique avec à sa tête le prophète François Xavier ALLOKPE. Son siège est à Cotonou
+                    (Bénin) précisément à Godomey PK 14. Elle a pour mandat de propager la bonne nouvelle de Jésus-Christ, de proclamer la liberté aux captifs. <br>
+                    Elle dispose d'une chaîne.</p>
 
                     <a href="service-2.html" class="btn btn-primary py-3 mt-4">Voir plus</a>
 
@@ -54,7 +61,7 @@
             </div>
             <!-- philosophy image -->
             <div class="col-lg-5 align-self-center order-1 order-lg-2 mb-md-50">
-                <img class="img-fluid w-100" src="{{ asset('front/images/membre/pasteur.png') }}" alt="philosophy-image" height="500" >
+                <img class="img-fluid w-100" src="{{ asset('/front/images/membre/pasteur.png') }}" alt="philosophy-image" height="500" >
             </div>
         </div>
     </div>
@@ -62,16 +69,15 @@
 <!-- /philosophy -->
 
 <!-- ceo section -->
-<section>
+{{-- <section>
     <div class="container">
         <div class="row rounded bg-secondary">
             <!-- ceo image -->
-            <div class="col-lg-5 rounded-left ceo-image" style="background-image: url({{ asset('front/images/about/ceo.jpg') }});"></div>
+            <div class="col-lg-5 rounded-left ceo-image" style="background-image: url({{ asset('/front/images/pdv4.jpeg') }});"></div>
             <div class="col-lg-7">
                 <!-- ceo content -->
                 <div class="p-5">
-                    <h2 class="section-title section-title-border-half-white text-white"> Que faisons-nous
-                        <br> et pour quel but ? </h2>
+                    <h2 class="section-title section-title-border-half-white text-white"> Nos désirs ardents </h2>
                     <p class="text-white">Notre mission est de mettre en œuvre des actions d'évangélisation pour le salut et la libération des âmes dans le monde entier, dévoiler et briser les jougs de la sorcellerie à travers des prédications et enseignements puissants, permettre aux enfants de Dieu de toute la planète d'être libéré de servitude du diable, accorder une vie pleine de jouissance et de liberté en Jésus-Christ.</p>
                         <p class="text-white">Nous visons évangéliser le monde entier au travers des campagnes d'évangélisation, les mass médias (la télévision, les réseaux sociaux). Ériger des églises locales dans les contrées et nations. Former des disciples accomplis pour la relève et l'impact de la nouvelle génération. Créer des orphelinats pour l'assistance aux enfants délaissés. Créer un hôpital de référence. Créer des centres agro-pastoraux, pisciculture etc...</p>
 
@@ -79,11 +85,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- /ceo section -->
 
 <!-- skill -->
-<section class="section">
+{{-- <section class="section">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -133,11 +139,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div>66665177
         </div>
     </div>
-</section>
+</section> --}}
 <!-- /skill -->
 
 <section class="fun-facts overlay-dark section-sm" style="background-image: url(images/background/cta.jpg);">
@@ -192,7 +197,7 @@
                 <h2 class="section-title section-title-border"> Des fidèles témoignent </h2>
             </div>
             <div class="col-lg-5 col-md-5 pr-0 align-self-center">
-                {{-- <img class="img-fluid w-100" src="{{ asset('front/images/client.png') }}" alt="clients-image"> --}}
+                <img class="img-fluid w-100" src="{{ asset('/front/images/pdv2.jpeg') }}" alt="clients-image">
             </div>
             <div class="col-lg-7 col-md-7 align-self-center pl-0">
                 <div class="testimonial-slider p-5">
