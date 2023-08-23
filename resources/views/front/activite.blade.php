@@ -3,7 +3,7 @@
 
 
 
-<section class="page-title overlay" style="background-image: url({{ asset('/front/images/background/page-title.jpg') }});">
+<section class="page-title overlay" style="background-image: url({{ asset('front/images/page-img1.svg') }});">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -43,7 +43,7 @@
                 @forelse ($activites as $activite)
                         <div class="col-md-4 atout-item">
                             <div class="card h-100">
-                                <img src="{{ asset('/storage/' . $activite->photo) }}" class="card-img-top"
+                                <img src="{{ asset('storage/' . $activite->photo) }}" class="card-img-top"
                                     alt="">
 
                                 <div class="card-body">

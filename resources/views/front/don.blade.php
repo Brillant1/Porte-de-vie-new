@@ -43,7 +43,6 @@
             <div class="tab-content shadow detail-activite-content p-4 w-75" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="">
-                        {{-- <img src="{{ asset('admin/images/card/1.png') }}" alt="" class="w-100" style="height: 450px; width:100%; " > --}}
                     </div>
                     <div>
                         <form action="#" class="offrande-form mt-4 pt-2  px-3">
@@ -69,6 +68,7 @@
                                     <option value="dime">Dîme</option>
                                     <option value="dime">Offrande</option>
                                     <option value="dime">Semence</option>
+                                    <option value="anonyme">Anonyme</option>
                                 </select>
                             </div>
 

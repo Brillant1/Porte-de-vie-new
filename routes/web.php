@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ActiviteController;
 use App\Http\Controllers\Admin\PartenaireController;
 use App\Http\Controllers\Admin\TemoignageController;
+use App\Http\Controllers\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,9 +54,7 @@ Route::get('annexes/all', [HomeController::class, 'annexe_index'])->name('annexe
 
 Route::post('validate_paiement', [HomeController::class, 'validate_paiement'])->name('validate_paiement');
 
-Route::get('about', function(){
-    return view('front.about');
-})->name('about');
+Route::get('about', [HomeController::class, 'about'])->name('about');
 
 Route::get('contact', function(){
     return view('front.contact');
@@ -68,10 +67,9 @@ Route::get('equipe', function(){
 
 Route::get('toutes-les-activites', [ActiviteController::class, 'all_activites'])->name('all-activities');
 Route::get('tous-les-services', [ActiviteController::class, 'all_services'])->name('all-services');
+Route::get('tous-les-dons', [DonController::class, 'index'])->name('all-dons');
 
-Route::get('mediatheque', function(){
-    return view('front.mediatheque');
-})->name('mediatheque');
+Route::get('mediatheque', [MediaController::class, 'mediatheque'])->name('mediatheque');
 
 Route::get('dashboard', function(){
     return view('Admin.Dashboard');
@@ -81,7 +79,9 @@ Route::get('dashboard', function(){
 Route::resource('activites', ActiviteController::class);
 Route::resource('services', ServiceController::class);
 Route::resource('partenaires', PartenaireController::class);
+
 Route::resource('temoignages', TemoignageController::class);
+Route::resource('medias', MediaController::class);
 Route::resource('activites', ActiviteController::class);
 Route::resource('annexes', AnnexeController::class);
 Route::resource('apointments', ApointmentController::class);
@@ -100,3 +100,6 @@ Route::post('/submit_form', [HomeController::class, 'validate_paiement'])->name(
 Route::get('don', [DonController::class, 'create'])->name('don');
 Route::get('typeDon', [DonController::class, 'type_don'])->name('typeDon');
 Route::get('partenariat', [PartenaireController::class, 'create'])->name('partenariat');
+
+
+Route::get('message', [ContactMailController::class, 'index'])->name('messages.index');

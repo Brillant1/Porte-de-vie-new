@@ -1,7 +1,7 @@
 @extends('front.partials.template')
 @section('content')
     <!-- team -->
-    <section class="page-title overlay" style="background-image: url({{ asset('public/front/images/background/page-title.jpg') }});">
+    <section class="page-title overlay" style="background-image: url({{ asset('front/images/appointment.jpg') }});">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">

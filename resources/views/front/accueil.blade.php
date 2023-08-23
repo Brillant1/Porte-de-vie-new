@@ -13,7 +13,7 @@
 
 
         <div class="hero-slider position-relative">
-            <div class="hero-slider-item" style="background-image: url({{ asset('public/front/images/membre/img-pdv1.jpeg') }});"
+            <div class="hero-slider-item" style="background-image: url({{ asset('front/images/membre/img-pdv1.jpeg') }});"
                 data-icon="ti-comments" data-text="L'église">
                 <div class="container-fluid d-flex justify-content-center bg-dark h-100 py-160" style="opacity:0.7">
                     <div class="w-75">
@@ -25,11 +25,11 @@
                                             data-animation-in="fadeInLeft" data-delay-in=".1">Eglise Evangélique</h4>
                                         <h1 class="font-weight-bold mb-3 text-white" data-duration-in=".5"
                                             data-animation-in="fadeInLeft" data-delay-in=".5">
-                                            Porte de vie</h1>
+                                            PORTE DE VIE</h1>
                                         <h4 class="mb-50 text-white w-75 mt-3" data-duration-in=".5"
                                             data-animation-in="fadeInLeft" data-delay-in=".9">Nous travaillons à faire de
-                                            toute l'humanité des disciples de christ
-                                            Jésus selon qu'il est dit: <br>
+                                            toute l'humanité des disciples de Christ
+                                            Jésus selon qu'il est écrit: <br>
                                             << Allez, faites de toutes les nations des disciples, les baptisant au nom du
                                                 Père, du Fils et du Saint-Esprit, et enseignez-leur à observer tout ce que
                                                 je vous ai prescrit. <br>
@@ -50,7 +50,7 @@
             </div>
 
 
-            <div class="hero-slider-item " style="background-image: url({{ asset('public/front/images/membre/img-pdv1.jpeg') }});"
+            <div class="hero-slider-item " style="background-image: url({{ asset('front/images/membre/img-pdv1.jpeg') }});"
                 data-icon="ti-comments" data-text="L'église">
                 <div class="container-fluid d-flex justify-content-center bg-dark h-100 py-160" style="opacity:0.7">
                     <div class="w-75">
@@ -62,11 +62,11 @@
                                             data-animation-in="fadeInLeft" data-delay-in=".1">Eglise Evangélique</h4>
                                         <h1 class="font-weight-bold mb-3 text-white" data-duration-in=".5"
                                             data-animation-in="fadeInLeft" data-delay-in=".5">
-                                            Porte de vie</h1>
+                                            PORTE DE VIE</h1>
                                         <h4 class="mb-50 text-white w-75 mt-3" data-duration-in=".5"
                                             data-animation-in="fadeInLeft" data-delay-in=".9">Nous travaillons à faire de
-                                            toute l'humanité des disciples de christ
-                                            Jésus selon qu'il est dit: <br>
+                                            toute l'humanité des disciples de Christ
+                                            Jésus selon qu'il est écrit: <br>
                                             << Allez, faites de toutes les nations des disciples, les baptisant au nom du
                                                 Père, du Fils et du Saint-Esprit, et enseignez-leur à observer tout ce que
                                                 je vous ai prescrit. <br>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-slider-item " style="background-image: url({{ asset('public/front/images/membre/img-pdv1.jpeg') }});"
+            <div class="hero-slider-item " style="background-image: url({{ asset('front/images/membre/img-pdv1.jpeg') }});"
                 data-icon="ti-comments" data-text="L'église">
                 <div class="container-fluid d-flex justify-content-center bg-dark h-100 py-160" style="opacity:0.7">
                     <div class="w-75">
@@ -97,11 +97,11 @@
                                             data-animation-in="fadeInLeft" data-delay-in=".1">Eglise Evangélique</h4>
                                         <h1 class="font-weight-bold mb-3 text-white" data-duration-in=".5"
                                             data-animation-in="fadeInLeft" data-delay-in=".5">
-                                            Porte de vie</h1>
+                                            PORTE DE VIE</h1>
                                         <h4 class="mb-50 text-white w-75 mt-3" data-duration-in=".5"
                                             data-animation-in="fadeInLeft" data-delay-in=".9">Nous travaillons à faire de
-                                            toute l'humanité des disciples de christ
-                                            Jésus selon qu'il est dit: <br>
+                                            toute l'humanité des disciples de Christ
+                                            Jésus selon qu'il est écrit: <br>
                                             << Allez, faites de toutes les nations des disciples, les baptisant au nom du
                                                 Père, du Fils et du Saint-Esprit, et enseignez-leur à observer tout ce que
                                                 je vous ai prescrit. <br>
@@ -134,7 +134,7 @@
                 <div class="col-lg-4 align-self-center">
                     <div class="overlay overlay-rounded mb-md-50">
                         <img class="img-fluid w-100 rounded"
-                            src="{{ asset('public/front/images/dossierImage/pst-present.png') }}" alt="video-thumbnail">
+                            src="{{ asset('front/images/dossierImage/pst-present.png') }}" alt="video-thumbnail">
                         <a class="play-icon popup-youtube centralized" href="https://www.youtube.com/watch?v=VAwZDS-bVsU"><i
                                 class="ti-control-play"></i></a>
                     </div>
@@ -165,46 +165,52 @@
     <section class="section d-flex justify-content-center">
         <div class="" style="width:75%;">
             <div class="row">
-                <div class="col-12 text-center">
-                    {{-- <h5 class="section-title-sm">Best Service</h5> --}}
-                    <h2 class="section-title section-title-border">Mission & Vision</h2>
-                </div>
-                <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-6 shadow-lg p-4 rounded">
                     <div class="mb-40">
-                        <p class="text-dark">Notre mission est de mettre en œuvre des actions d'évangélisation pour le
-                            salut et la libération des âmes dans le monde entier,
-                            dévoiler et briser les jougs de la sorcellerie à travers des prédications et enseignements
-                            puissants, permettre aux enfants de Dieu
-                            de toute la planète d'être libéré de servitude du diable, accorder une vie pleine de jouissance
-                            et de liberté en Jésus-Christ.</p>
-                        <p class="text-dark mb-30">Nous visons évangéliser le monde entier au travers des campagnes
-                            d'évangélisation, les mass médias (la télévision, les réseaux sociaux). Ériger des églises
-                            locales dans les contrées et nations. Former des disciples accomplis pour la relève et l'impact
-                            de la nouvelle
-                            génération. Créer des orphelinats pour l'assistance aux enfants délaissés. Créer un hôpital de
-                            référence. Créer des centres agro-pastoraux, pisciculture etc...</p>
-                    </div>
-
-                </div>
-                <!-- progressbar -->
-                {{-- <div class="col-lg-4 d-flex justify-content-end">
-                    <img src="{{ asset('/front/images/dossierImage/institut_logo.png') }}" alt="" width="300" height="300">
-                </div> --}}
-
-                {{-- <div class="d-flex justify-content-start">
-                    <div>
-                        <p>Mission</p>
-                        <p class="text-justify">
+                        <h2 class="section-title section-title-border text-center">MISSION</h2>
+                        <div class="text-dark">
                             Notre mission est de mettre en œuvre des actions d'évangélisation pour le
                             salut et la libération des âmes dans le monde entier,
                             dévoiler et briser les jougs de la sorcellerie à travers des prédications et enseignements
                             puissants, permettre aux enfants de Dieu
                             de toute la planète d'être libéré de servitude du diable, accorder une vie pleine de jouissance
                             et de liberté en Jésus-Christ.
-                        </p>
+                        </div>
+
                     </div>
-                    <div></div>
-                </div> --}}
+                </div>
+                <div class="col-6">
+                    <div class="">
+                        {{-- <img class="w-100" src="{{ asset('front/images/service/service-single.jpg')  }}" alt=""> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section d-flex justify-content-center">
+        <div class="" style="width:75%;">
+            <div class="row">
+                <div class="col-6">
+                    <div class="">
+                        {{-- <img class="w-100" src="{{ asset('front/images/service/service-single.jpg')  }}" alt=""> --}}
+                    </div>
+                </div>
+                <div class="col-6 shadow-lg p-4 rounded">
+                    <div class="mb-40">
+                        <h2 class="section-title section-title-border text-center">VISION</h2>
+                        <div class="text-dark">
+                            Nous visons évangéliser le monde entier au travers des campagnes
+                            d'évangélisation, les masses médias (la télévision, les réseaux sociaux). Ériger des églises
+                            locales dans les contrées et nations. Former des disciples accomplis pour la relève et l'impact
+                            de la nouvelle
+                            génération. Créer des orphelinats pour l'assistance aux enfants délaissés. Créer un hôpital de
+                            référence. Créer des centres agro-pastoraux, pisciculture etc...
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -222,7 +228,7 @@
                     @forelse ($services as $service)
                         <div class="col-md-4 atout-item">
                             <div class="card h-100">
-                                <img src="{{ asset('public/storage/' . $service->photo) }}" class="card-img-top" alt="">
+                                <img src="{{ asset('storage/' . $service->photo) }}" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h4 class="card-title text-center rosette-text-orange ">{{ $service->intitule }}</h4>
                                     <p class="card-text text-center">{!! Str::limit($service->description, 250, '...') !!}</p>
@@ -257,7 +263,7 @@
                     @forelse ($activites as $activite)
                         <div class="col-md-4 atout-item">
                             <div class="card h-100">
-                                <img src="{{ asset('public/storage/' . $activite->photo) }}" class="card-img-top"
+                                <img src="{{ asset('storage/' . $activite->photo) }}" class="card-img-top"
                                     alt="">
 
                                 <div class="card-body">
@@ -318,7 +324,7 @@
                             <div class="card-body">
                                 <h5 class="card-title pt-3">Rendez-vous simple</h5>
                                 <p class="card-text mb-0 text-justify">
-                                    Vous aimeriez voir le Prophète. Intéressez par les merveilles de Dieu ? Alors cliquez sur le lien « Je prends » pour remplir le formulaire rendez-vous ordinaire.
+                                    Vous désirez prendre des renseignements sur le ministère, poser des questions, parler de problèmes ou recevoir des prières.  Alors cliquez sur le lien « Je prends » pour remplir le formulaire de rendez-vous ordinaire.
                                 </p>
 
                                 <div class="d-flex justify-content-end mt-4">
@@ -343,7 +349,7 @@
                             <div class="card-body">
                                 <h5 class="card-title pt-3">Rendez-vous prophétique</h5>
                                 <p class="card-text mb-0 text-justify">
-                                    Vous aimeriez voir le Prophète. Intéressez par les merveilles de Dieu ? Alors cliquez sur le lien « Je prends » pour remplir le formulaire rendez-vous prophétique. Veillez noter que ce rendez-vous est subordonné par une suscription élémentaire qui s’élève à <strong>10.000 FCFA</strong>
+                                    Vous aimeriez voir le Prophète. Intéressez par les merveilles de Dieu ? Alors cliquez sur le lien « Je prends » pour remplir le formulaire de rendez-vous prophétique. Veillez noter que ce rendez-vous est subordonné par une suscription élémentaire qui s’élève à <strong>10.000 FCFA</strong>
                                 </p>
 
                                 <div class="d-flex justify-content-end mt-4">
@@ -378,7 +384,7 @@
 
 
     <section class="cta overlay-primary py-50 text-center text-lg-left"
-        style="background-image: url({{ asset('public/front/images/background/cta.jpg') }});">
+        style="background-image: url({{ asset('front/images/img-fond.PNG') }});">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-8">

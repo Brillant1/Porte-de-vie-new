@@ -30,7 +30,7 @@
         <div class="container-fluid px-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="{{ route('accueil') }}">
-                    <img src="{{ asset('public/front/images/membre/logo.svg') }}" alt="logo">
+                    <img src="{{ asset('front/images/membre/logo.svg') }}" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

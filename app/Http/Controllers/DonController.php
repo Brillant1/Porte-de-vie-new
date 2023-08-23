@@ -13,7 +13,8 @@ class DonController extends Controller
      */
     public function index()
     {
-
+        $dons = Don::all();
+        return view('Admin.Dons.index', compact('dons'));
     }
 
     /**

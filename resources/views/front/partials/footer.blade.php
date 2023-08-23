@@ -6,25 +6,25 @@
           <div class="col-md-4">
             <div class="mb-5 mb-md-0 text-center text-md-left">
               <!-- logo -->
-              <img class="mb-30" src="{{ asset('/front/images/membre/logo.svg') }}" alt="logo">
+              <img class="mb-30" src="{{ asset('front/images/membre/logo.svg') }}" alt="logo">
               <p class="text-white mb-30">Nous sommes une église évangélique  qui investit dans la quête des âmes pour le Christ.
                 Nous avons une doctrine fondée uniquement sur Jésus-Christ et rien d'autre.
               </p>
               <!-- social icon -->
               <ul class="list-inline">
                 <li class="list-inline-item">
-                  <a class="social-icon-outline" href="#">
+                  <a class="social-icon-outline" href="facebook.com/sec.sec.sans.melange" title="facebook">
                     <i class="ti-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="social-icon-outline" href="#">
-                    <i class="ti-twitter-alt"></i>
+                  <a class="social-icon-outline" href="https://www.youtube.com/watch?v=VAwZDS-bVsU" title="youtube">
+                    <i class="ti-youtube"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="social-icon-outline" href="#">
-                    <i class="ti-linkedin"></i>
+                  <a class="social-icon-outline" href="tiktok.com/@porte_tv_officiel" title="tiktok">
+                    <i class="ti-tumblr-alt"></i>
                   </a>
                 </li>
               </ul>
@@ -35,19 +35,17 @@
             <h4 class="text-white mb-4">Services</h4>
             <ul class="footer-links">
               <li>
-                <a href="#">Rendez-vous</a>
+                <a href="{{ route('apointments.index') }}">Rendez-vous</a>
+              </li>
+
+              <li>
+                <a href="#">Prière de combat</a>
               </li>
               <li>
-                <a href="about.html">Rendez-vous</a>
+                <a href="https://www.youtube.com/watch?v=VAwZDS-bVsU">Chaîne télévisée</a>
               </li>
               <li>
-                <a href="about.html">Prière de combat</a>
-              </li>
-              <li>
-                <a href="contact.html">Chaîne télévisée</a>
-              </li>
-              <li>
-                <a href="service.html">Mission évangélique</a>
+                <a href="#">Mission évangélique</a>
               </li>
             </ul>
           </div>

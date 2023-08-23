@@ -15,8 +15,13 @@ class HomeController extends Controller
     public function index(){
         $activites = Activite::all()->take(3);
         $services = Service::all()->take(3);
+
+        return view('front.accueil', compact('activites', 'services'));
+    }
+
+    public function about(){
         $temoignages = Temoignage::all()->take(3);
-        return view('front.accueil', compact('activites', 'services', 'temoignages'));
+        return view('front.about', compact('temoignages'));
     }
 
     public function annexe_index(){
@@ -33,7 +38,7 @@ class HomeController extends Controller
         ], 200);
     }
 
-  
+
 
     public function validate_paiement(Request $request){
         $transaction_id = $request->query('transaction_id');

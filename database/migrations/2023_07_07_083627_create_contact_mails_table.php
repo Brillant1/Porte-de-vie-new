@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('contact_mails', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->bigInteger('phone');
+            $table->string('phone');
             $table->string('email');
             $table->text('objet');
             $table->text('message');

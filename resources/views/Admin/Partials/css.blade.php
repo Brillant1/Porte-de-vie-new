@@ -10,3 +10,4 @@
 <link rel="stylesheet" href="{{ asset('admin/vendor/pickadate/themes/default.date.css') }}">
 <link rel="stylesheet" href="{{ asset('admin/vendor/summernote/summernote.css') }}">
 <link rel="stylesheet" href="{{ asset('admin/css/styles.css') }}">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

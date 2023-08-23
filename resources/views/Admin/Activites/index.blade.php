@@ -50,15 +50,14 @@ border-color: #badbcc;
                                         <th>Contenu</th>
                                         <th>Action</th>
                                     </tr>
-                                </thead>*889 1 1
-                                59238
+                                </thead>
                                 <tbody>
 
                                     @forelse ($activites as $activite)
                                     <tr>
 
                                         <td><img class="rounded-circle" width="35" src="{{ asset('storage/'.$activite->photo) }}" alt=""></td>
-                                       
+
                                         <td>{{ $activite->titre }}</td>
                                         <td>{{ \Carbon\Carbon::parse($activite->start_date)->format('d-m-Y') }}</td>
                                         <td>{{ \Carbon\Carbon::parse($activite->end_date)->format('d-m-Y') }}</td>
@@ -73,7 +72,7 @@ border-color: #badbcc;
                                                 <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                        <h5 class="modal-title" id="exampleModalLabel">Suppression d'activité</h5>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>

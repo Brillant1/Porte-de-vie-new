@@ -1,7 +1,7 @@
 @extends('front.partials.template')
 @section('content')
 
-<section class="page-title overlay" style="background-image: url({{ asset('public/front/images/background/page-title.jpg') }});">
+<section class="page-title overlay" style="background-image: url({{ asset('front/images/partenariat.jpg') }});">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -28,8 +28,6 @@
 
                 <div class="col-md-4 atout-item">
                     <div class="card h-100">
-                        {{-- <img src="{{ asset('/storage/' .$activite->photo) }}" class="card-img-top" alt=""> --}}
-
                         <div class="card-body">
                             <h5 class="card-title pt-3">LES DIMES</h5>
                             <p class="card-text mb-0 text-justify">
@@ -46,8 +44,6 @@ La dîme est la source de bénédictions
                 {{-- Rendez-vous prophétique --}}
                 <div class="col-md-4 atout-item">
                     <div class="card h-100">
-                        {{-- <img src="{{ asset('/storage/' .$activite->photo) }}" class="card-img-top" alt=""> --}}
-
                         <div class="card-body">
                             <h5 class="card-title pt-3">LES OFFRANDES</h5>
                             <p class="card-text mb-0 text-justify">
@@ -61,10 +57,8 @@ La dîme est la source de bénédictions
 
                 <div class="col-md-4 atout-item">
                     <div class="card h-100">
-                        {{-- <img src="{{ asset('/storage/' .$activite->photo) }}" class="card-img-top" alt=""> --}}
-
                         <div class="card-body">
-                            <h5 class="card-title pt-3">BONNES SEMANCES</h5>
+                            <h5 class="card-title pt-3">SEMANCES</h5>
                             <p class="card-text mb-0 text-justify">
                                 La semence c'est un don sacrificiel qui provoque l'ouverture des portes de bénédictions.
                                 (2 Corinthiens, 9:6) - Sachez-le, celui qui sème peu moissonnera peu, et celui qui sème abondamment moissonnera abondamment.
@@ -98,8 +92,6 @@ La dîme est la source de bénédictions
 
                 <div class="col-md-4 atout-item">
                     <div class="card h-100">
-                        {{-- <img src="{{ asset('/storage/' .$activite->photo) }}" class="card-img-top" alt=""> --}}
-
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie B</h5>
                             <p class="card-text mb-0 text-justify">
@@ -113,8 +105,6 @@ La dîme est la source de bénédictions
                 {{-- Rendez-vous prophétique --}}
                 <div class="col-md-4 atout-item">
                     <div class="card h-100">
-                        {{-- <img src="{{ asset('/storage/' .$activite->photo) }}" class="card-img-top" alt=""> --}}
-
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie A</h5>
                             <p class="card-text mb-0 text-justify">
@@ -127,8 +117,6 @@ La dîme est la source de bénédictions
 
                 <div class="col-md-4 atout-item">
                     <div class="card h-100">
-                        {{-- <img src="{{ asset('/storage/' .$activite->photo) }}" class="card-img-top" alt=""> --}}
-
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie VIP</h5>
                             <p class="card-text mb-0 text-justify">
@@ -140,8 +128,6 @@ La dîme est la source de bénédictions
 
                 <div class="col-md-4 mt-3 atout-item">
                     <div class="card h-100">
-                        {{-- <img src="{{ asset('/storage/' .$activite->photo) }}" class="card-img-top" alt=""> --}}
-
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie VIP STAR</h5>
                             <p class="card-text mb-0 text-justify">

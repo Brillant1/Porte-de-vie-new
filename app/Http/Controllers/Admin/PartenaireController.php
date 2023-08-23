@@ -14,7 +14,8 @@ class PartenaireController extends Controller
      */
     public function index()
     {
-        //
+        $partenaires = Partenariat::all();
+        return view('Admin.Partenaires.index', compact('partenaires'));
     }
 
     /**

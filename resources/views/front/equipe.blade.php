@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- team -->
-<section class="page-title overlay" style="background-image: url({{ asset('front/images/background/page-title.jpg') }});">
+<section class="page-title overlay" style="background-image: url({{ asset('front/images/img-fond.PNG') }});">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2 class="mb-2 text-center">Notre équipe dirigenate</h2>
+                <h2 class="section-title section-title-border text-center">Notre équipe dirigeante</h2>
                 <p class="mb-5 text-center h4">Nul ne peut valoir une grande institution de Dieu que par l’accomplissement de la prophétie de ses vaillants dirigeants</p>
             </div>
             <!-- team member -->
@@ -133,6 +133,43 @@
         </div>
     </div>
 </section>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center flex-column">
+                <h2 class="section-title section-title-border text-center">Groupe musical Ebenezer</h2>
+                <img src="{{ asset('front/images/eben.jpeg') }}" alt="Photo groupe musical Eben-Ezer" class="mt-4">
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center flex-column">
+                <h2 class="section-title section-title-border text-center">Groupe des Sentinelles</h2>
+                <div class="">
+                    <img src="{{ asset('front/images/sentinelle.jpeg') }}" alt="Photo groupe musical Eben-Ezer" class="mt-4">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center flex-column">
+                <h2 class="section-title section-title-border text-center">Groupe Deuteronome</h2>
+                <img src="{{ asset('front/images/Deuteronome.jpeg') }}" alt="Photo groupe musical Eben-Ezer" class="mt-4">
+            </div>
+        </div>
+
+    </div>
+</section>
 <!-- /team -->
 
 <!-- cta -->
@@ -144,7 +181,7 @@
                 <p class="text-white mb-0">Pour tous vos problèmes, vous pouvez prendre rendez-vous avec nous.</p>
             </div>
             <div class="col-lg-3 text-lg-right text-center align-self-center">
-                <a href="contact.html" class="btn btn-light">Réserver maintenant</a>
+                <a href="{{ route('apointments.index') }}" class="btn btn-light">Réserver maintenant</a>
             </div>
         </div>
     </div>

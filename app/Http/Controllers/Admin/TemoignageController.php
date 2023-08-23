@@ -62,7 +62,7 @@ class TemoignageController extends Controller
 
         $temoignage = Temoignage::where('id', $id)->first();
         if($temoignage){
-            return view('Admin.Services.edit', compact('service'));
+            return view('Admin.Temoignages.edit', compact('temoignage'));
         }
     }
 

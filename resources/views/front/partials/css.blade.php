@@ -19,7 +19,7 @@
 
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ asset('front/images/favicon.png') }}" type="image/x-icon">
-  <link rel="icon" href="{{ asset('front/images/favicon.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ asset('front/images/membre/logo.svg') }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ asset('front/css/styles.css') }}">
 <script src="{{ asset('front/plugins/jQuery/jquery.min.js') }}"></script>
 

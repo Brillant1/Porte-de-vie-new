@@ -1,7 +1,7 @@
 @extends('front.partials.template')
 @section('content')
     <!-- team -->
-    <section class="page-title overlay" style="background-image: url({{ asset('front/images/background/page-title.jpg') }});">
+    <section class="page-title overlay" style="background-image: url({{ asset('front/images/media.jpg') }});">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -43,33 +43,26 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="{{ asset('front/images/membre/img-pdv.jpeg') }}" class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="{{ asset('front/images/membre/img-pdv1.jpeg') }}" class="card-img-top" alt="...">
 
+                            @foreach ($photos as $photo)
+                                <div class="col mt-2">
+                                    <div class="card h-100">
+                                        <img src="{{ asset('storage/' . $photo->url) }}" class="card-img-top" alt="...">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="{{ asset('front/images/membre/img-pdv2.jpeg') }}" class="card-img-top" alt="...">
-
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="{{ asset('front/images/background/promo-video.jpg') }}" class="card-img-top" alt="...">
-
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
+                        <div class="row row-cols-1 row-cols-md-3 g-4 ">
+                            @foreach ($videos as $video)
+                                <div class="col mt-2" >
+                                    <div class="card h-100">
+                                        <img src="{{ asset('storage/' . $video->url) }}" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
 

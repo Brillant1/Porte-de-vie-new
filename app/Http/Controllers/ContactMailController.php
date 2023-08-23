@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Mail;
 class ContactMailController extends Controller
 {
 
+    public function index(){
+        $messages = ContactMail::all();
+        return view('Admin.contactMessage', compact('messages'));
+    }
+
     public function create(){
         return view('front.contact');
     }
@@ -32,11 +37,10 @@ class ContactMailController extends Controller
             'message' => $request->message
         ];
         ContactMail::create($detailMessage);
-        Mail::to($request->email)->send(new ContactFormMail($detailMessage));
-        // return response()->json([
-        //     'success' => true
-        // ], 200);
-        return back()->with('success', 'Message envoyé avec succès ! Restez à l\'écoute pour notre retour');
+        //Mail::to($request->email)->send(new ContactFormMail($detailMessage));
+        return response()->json([
+            'success' => true
+        ], 200);
 
     }
 }

@@ -16,7 +16,8 @@
                     <li><a href="{{ route('activites.create') }}">Ajouter</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                     <i class="la la-users"></i>
                     <span class="nav-text">Services</span>
                 </a>
@@ -35,14 +36,25 @@
                 </ul>
             </li>
             <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                <a class="" href="{{ route('all-dons') }}" aria-expanded="false">
+                    <i class="la la-book"></i>
+                    <span class="nav-text">Dons</span>
+                </a>
+
+            </li>
+            <li>
+                <a class="" href="{{ route('partenaires.index') }}" aria-expanded="false">
                     <i class="la la-book"></i>
                     <span class="nav-text">Partenaires</span>
                 </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('partenaires.index') }}">Liste</a></li>
-                    <li><a href="{{ route('partenaires.create') }}">Ajouter</a></li>
-                </ul>
+
+            </li>
+            <li>
+                <a class="" href="{{ route('messages.index') }}" aria-expanded="false">
+                    <i class="la la-book"></i>
+                    <span class="nav-text">Messages</span>
+                </a>
+
             </li>
             <li>
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
@@ -52,6 +64,18 @@
                 <ul aria-expanded="false">
                     <li><a href="{{ route('temoignages.index') }}">Liste</a></li>
                     <li><a href="{{ route('temoignages.create') }}">Ajouter</a></li>
+                </ul>
+            </li>
+
+
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="la la-book"></i>
+                    <span class="nav-text">Médias</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('medias.index') }}">Liste</a></li>
+                    <li><a href="{{ route('medias.create') }}">Ajouter</a></li>
                 </ul>
             </li>
         </ul>
