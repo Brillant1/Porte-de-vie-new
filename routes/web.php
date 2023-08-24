@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DonController;
 use Illuminate\Support\Facades\Artisan;
@@ -12,6 +13,8 @@ use App\Http\Controllers\Admin\ActiviteController;
 use App\Http\Controllers\Admin\PartenaireController;
 use App\Http\Controllers\Admin\TemoignageController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -71,19 +74,26 @@ Route::get('tous-les-dons', [DonController::class, 'index'])->name('all-dons');
 
 Route::get('mediatheque', [MediaController::class, 'mediatheque'])->name('mediatheque');
 
-Route::get('dashboard', function(){
-    return view('Admin.Dashboard');
-})->name('dashboard');
 
 
-Route::resource('activites', ActiviteController::class);
-Route::resource('services', ServiceController::class);
+Route::middleware('auth')->group(function () {
+    Route::resource('temoignages', TemoignageController::class);
+    Route::resource('medias', MediaController::class);
+    Route::resource('activites', ActiviteController::class);
+    Route::resource('annexes', AnnexeController::class);
+    Route::resource('activites', ActiviteController::class);
+    Route::resource('services', ServiceController::class);
+
+    // Auth routh
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+
 Route::resource('partenaires', PartenaireController::class);
 
-Route::resource('temoignages', TemoignageController::class);
-Route::resource('medias', MediaController::class);
-Route::resource('activites', ActiviteController::class);
-Route::resource('annexes', AnnexeController::class);
+
 Route::resource('apointments', ApointmentController::class);
 Route::post('/storeApointment', [ApointmentController::class, 'store'])->name('storeApointment');
 Route::post('/storeDon', [DonController::class, 'store'])->name('storeDon');
@@ -103,3 +113,10 @@ Route::get('partenariat', [PartenaireController::class, 'create'])->name('parten
 
 
 Route::get('message', [ContactMailController::class, 'index'])->name('messages.index');
+
+Route::get('/dashboard', function () {
+    return view('Admin.Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+require __DIR__.'/auth.php';

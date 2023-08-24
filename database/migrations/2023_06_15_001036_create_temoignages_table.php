@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('temoignages', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('lien');
-            $table->string('description');
+            $table->text('nom');
+            $table->text('lien');
+            $table->text('description');
             $table->timestamps();
         });
     }

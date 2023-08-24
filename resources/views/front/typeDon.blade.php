@@ -1,7 +1,7 @@
 @extends('front.partials.template')
 @section('content')
 
-<section class="page-title overlay" style="background-image: url({{ asset('front/images/partenariat.jpg') }});">
+<section class="page-title overlay" style="background-image: url({{ asset('public/front/images/partenariat.jpg') }});">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -32,9 +32,9 @@
                             <h5 class="card-title pt-3">LES DIMES</h5>
                             <p class="card-text mb-0 text-justify">
                                 La dîme c'est la dixième partie des revenus.
-(Lévitique, 27:30) - Toute dîme de la terre, soit des récoltes de la terre, soit du fruit des arbres, appartient à l`Éternel; c`est une chose consacrée à l`Éternel.
-La dîme est la source de bénédictions
-(Malachie, 3:10) - Apportez à la maison du trésor toutes les dîmes, Afin qu`il y ait de la nourriture dans ma maison; Mettez-moi de la sorte à l`épreuve, Dit l`Éternel des armées. Et vous verrez si je n`ouvre pas pour vous les écluses des cieux, Si je ne répands pas sur vous la bénédiction en abondance.
+                                (Lévitique, 27:30) - Toute dîme de la terre, soit des récoltes de la terre, soit du fruit des arbres, appartient à l`Éternel; c`est une chose consacrée à l`Éternel.
+                                La dîme est la source de bénédictions
+                                (Malachie, 3:10) - Apportez à la maison du trésor toutes les dîmes, Afin qu`il y ait de la nourriture dans ma maison; Mettez-moi de la sorte à l`épreuve, Dit l`Éternel des armées. Et vous verrez si je n`ouvre pas pour vous les écluses des cieux, Si je ne répands pas sur vous la bénédiction en abondance.
                             </p>
                         </div>
                     </div>
@@ -85,8 +85,7 @@ La dîme est la source de bénédictions
             </div>
             <p class="py-2">
                 C'est un don de soutien pour l'évolution de l'œuvre d'évangélisation
-(Actes, 4:34) - Car il n`y avait parmi eux aucun indigent: tous ceux qui possédaient des champs ou des maisons les vendaient, apportaient le prix de ce qu`ils avaient vendu,
-'oo.nknioo
+(Actes, 4:34) - Car il n`y avait parmi eux aucun indigent: tous ceux qui possédaient des champs ou des maisons les vendaient, apportaient le prix de ce qu`ils avaient vendu.
             </p>
             <div class=" row justify-content-start">
 
@@ -95,7 +94,7 @@ La dîme est la source de bénédictions
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie B</h5>
                             <p class="card-text mb-0 text-justify">
-                                Ce partenariat require le paiement d'une somme de 10 000 FCFA
+                                Ce partenariat require le paiement d'une somme de 10 000 FCFA en plus des frais de carte d'adhésion qui s'élève à 1000 FCFA.
                             </p>
                         </div>
                     </div>
@@ -108,7 +107,7 @@ La dîme est la source de bénédictions
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie A</h5>
                             <p class="card-text mb-0 text-justify">
-                                Ce partenariat require le paiement d'une somme de 20 000 FCFA
+                                Ce partenariat require le paiement d'une somme de 20 000 FCFA en plus des frais de carte d'adhésion qui s'élève à 1000 FCFA.
                             </p>
                         </div>
                     </div>
@@ -120,7 +119,7 @@ La dîme est la source de bénédictions
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie VIP</h5>
                             <p class="card-text mb-0 text-justify">
-                                Ce partenariat require le paiement d'une somme de 50 000 FCFA
+                                Ce partenariat require le paiement d'une somme de 50 000 FCFA en plus des frais de carte d'adhésion qui s'élève à 1000 FCFA.
                             </p>
                         </div>
                     </div>
@@ -131,7 +130,7 @@ La dîme est la source de bénédictions
                         <div class="card-body">
                             <h5 class="card-title pt-3">Catégorie VIP STAR</h5>
                             <p class="card-text mb-0 text-justify">
-                                Ce partenariat require le paiement d'une somme de 100 000 FCFA
+                                Ce partenariat require le paiement d'une somme de 100 000 FCFA en plus des frais de carte d'adhésion qui s'élève à 1000 FCFA.
                             </p>
                         </div>
                     </div>

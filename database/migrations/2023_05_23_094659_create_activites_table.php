@@ -18,8 +18,8 @@ return new class extends Migration
             $table->date('end_date');
             $table->text('titre');
             $table->text('description');
-            $table->string('zone');
-            $table->string('photo');
+            $table->text('zone');
+            $table->text('photo');
             $table->timestamps();
         });
     }

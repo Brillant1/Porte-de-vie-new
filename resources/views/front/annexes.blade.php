@@ -1,6 +1,6 @@
 @extends('front.partials.template')
 @section('content')
-    <section class="page-title overlay" style="background-image: url({{ asset('front/images/img-fond.PNG') }});">
+    <section class="page-title overlay" style="background-image: url({{ asset('public/front/images/img-fond.PNG') }});">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-5 d-flex align-items-center justify-content-center">
-                    <img class="w-100" src="{{ asset('front/images/siege_pdv.jpg') }}" alt="">
+                    <img class="w-100" src="{{ asset('public/front/images/siege_pdv.jpg') }}" alt="">
                 </div>
     </section>
 
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-5">
                     <div class="">
-                        {{-- <img class="w-100" src="{{ asset('front/images/service/service-single.jpg')  }}" alt=""> --}}
+                        {{-- <img class="w-100" src="{{ asset('public/front/images/service/service-single.jpg')  }}" alt=""> --}}
                     </div>
                 </div>
                 <div class="col-7 shadow-lg p-5">
@@ -71,7 +71,7 @@
                                     <li class="d-flex h2 font-weight-bold"><p class="w-50 font-weight-bold h4"> Horaires : </p> <p class=" font-weight-bold h4">Programmes</p></li>
                                     <li class="d-flex"><p class="w-50 font-weight-bold">Vendredi: 09h - 12h</p> <p>Culte Prophétique de délivrance et de guérison</p></li>
                                     <li class="d-flex"><p class="w-50 font-weight-bold">Dimanche: 09h - 12h</p> <p>Culte Prophétique d'adoration et de louanges</p></li>
-                                    <li class="d-flex mt-2"><p class="h4 font-weight-bold">Nous contacter sur : &nbsp;&nbsp;</p><p class="font-weight-bold text-danger">(+229) 67 36 87 31</p></li>
+                                    <li class="d-flex mt-2"><p class="h4 font-weight-bold">Nous contacter sur : &nbsp;&nbsp;</p><p class="font-weight-bold text-danger">(+229) 67 36 87 31 / 62 52 94 71</p></li>
                                 </ul>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                                     <li class="d-flex"><p class="w-50 font-weight-bold">Mardi: 18h - 21h</p> <p>Culte Prophétique de délivrance et de guérison</p></li>
                                     <li class="d-flex"><p class="w-50 font-weight-bold">Jeudi: 15h - 17h</p> <p>Enseignement des femmes </p></li>
                                     <li class="d-flex"><p class="w-50 font-weight-bold">Dimanche: 09h - 12h</p> <p>Culte Prophétique d'adoration et de louanges</p></li>
-                                    <li class="d-flex mt-2"><p class="h4 font-weight-bold">Nous contacter sur : &nbsp;&nbsp;</p><p class="font-weight-bold text-danger">(+229) 97 08 20 16</p></li>
+                                    <li class="d-flex mt-2"><p class="h4 font-weight-bold">Nous contacter sur : &nbsp;&nbsp;</p><p class="font-weight-bold text-danger">(+229) 97 08 20 16 / 62 52 94 71</p></li>
                                 </ul>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-5">
                     <div class="">
-                        {{-- <img class="w-100" src="{{ asset('front/images/service/service-single.jpg')  }}" alt=""> --}}
+                        {{-- <img class="w-100" src="{{ asset('public/front/images/service/service-single.jpg')  }}" alt=""> --}}
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
             <div class="row">
                 <div class="col-5">
                     <div class="">
-                        {{-- <img class="w-100" src="{{ asset('front/images/service/service-single.jpg')  }}" alt=""> --}}
+                        {{-- <img class="w-100" src="{{ asset('public/front/images/service/service-single.jpg')  }}" alt=""> --}}
                     </div>
                 </div>
                 <div class="col-7 shadow-lg p-5">
@@ -138,15 +138,12 @@
                                     <li class="d-flex h2 font-weight-bold"><p class="w-50 font-weight-bold h4"> Horaires : </p> <p class=" font-weight-bold h4">Programmes</p></li>
                                     <li class="d-flex"><p class="w-50 font-weight-bold">Vendredi: 17h - 21h</p> <p>Culte Prophétique de délivrance et de guérison</p></li>
                                     <li class="d-flex"><p class="w-50 font-weight-bold">Dimanche: 09h - 12h</p> <p>Culte Prophétique d'adoration et de louanges</p></li>
-                                    <li class="d-flex mt-2"><p class="h4 font-weight-bold">Nous contacter sur : &nbsp;&nbsp;</p><p class="font-weight-bold text-danger">(+229) 96 23 91 51</p></li>
+                                    <li class="d-flex mt-2"><p class="h4 font-weight-bold">Nous contacter sur : &nbsp;&nbsp;</p><p class="font-weight-bold text-danger">(+229) 96 23 91 51 / 62 52 94 71</p></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- progressbar -->
-
             </div>
         </div>
     </section>

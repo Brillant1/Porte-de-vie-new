@@ -52,10 +52,10 @@
                                 <label for="telephone" class=" form-label p-0 col-3 pl-3">Type de partenariat <span class="text-danger">*</span></label>
                                 <select name="type" id="type" class="form-select form-control">
                                     <option value="">Sélectionnez un partenariat</option>
-                                    <option value="20000">Catégorie A</option>
-                                    <option value="10000">Catégorie B</option>
-                                    <option value="50000">Catégorie VIP</option>
-                                    <option value="100000">Catégorie VIP STAR</option>
+                                    <option value="21000">Catégorie A</option>
+                                    <option value="11000">Catégorie B</option>
+                                    <option value="51000">Catégorie VIP</option>
+                                    <option value="101000">Catégorie VIP STAR</option>
                                 </select>
                             </div>
 
